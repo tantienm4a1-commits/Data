@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salehub - Cửa Hàng Thời Trang</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="Public/css/styles.css">
+</head>
+
+<body>
+
+    <header class="bg-white sticky-top shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light container d-none d-lg-flex position-relative py-4">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item"><a class="nav-link text-dark" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#">Pages</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#">Women</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#">Men</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#">Blog</a></li>
+                </ul>
+            </div>
+
+            <a class="navbar-brand position-absolute top-50 start-50 translate-middle m-0 fw-bold fs-2" href="#"
+                style="letter-spacing: -1px;">
+                Salehub
+            </a>
+            <div class="d-flex align-items-center gap-4 ms-auto">
+                <a href="#" class="text-dark text-decoration-none fs-6">
+                    <i class="fa-solid fa-magnifying-glass me-1"></i> Search
+                </a>
+                <a href="#" class="text-dark text-decoration-none fs-6">Account</a>
+                <a href="#" class="text-dark text-decoration-none fs-6 d-flex align-items-center">
+                    <i class="fa-solid fa-bag-shopping me-2 fs-5"></i> My Cart
+                    <span id="cart-count" class="badge rounded-pill text-dark ms-2"
+                        style="background-color: #fde047;">0</span>
+                </a>
+            </div>
+        </nav>
+        <nav class="navbar navbar-light d-lg-none px-3 py-2">
+            <div class="container-fluid p-0 d-flex align-items-center justify-content-between gap-2">
+                <a class="navbar-brand fw-bold m-0 fs-4" href="#" style="letter-spacing: -1px;">Salehub</a>
+                <div class="flex-grow-1 mx-2 position-relative">
+                    <input type="text" class="form-control rounded-pill py-1 px-3 pe-4" placeholder="Search products..."
+                        style="font-size: 0.75rem; border: 1px solid #e5e7eb; background-color: #f9fafb;">
+                    <i class="fa-solid fa-magnifying-glass position-absolute top-50 end-0 translate-middle-y me-3 text-muted"
+                        style="font-size: 0.75rem;"></i>
+                </div>
+                <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileMenu" style="box-shadow: none;">
+                    <span class="navbar-toggler-icon" style="width: 1.4rem; height: 1.4rem;"></span>
+                </button>
+
+            </div>
+        </nav>
+        <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="mobileMenu" style="width: 270px;">
+            <div class="offcanvas-header border-bottom">
+                <h5 class="offcanvas-title fw-bold" id="mobileMenuLabel">MENU</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="nav flex-column gap-3 fs-6 fw-semibold">
+                    <li class="nav-item"><a class="nav-link text-dark p-0" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark p-0" href="#">Pages</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark p-0" href="#">Women</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark p-0" href="#">Men</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark p-0" href="#">Blog</a></li>
+                    <hr class="my-2">
+                    <li class="nav-item"><a class="nav-link text-muted p-0 fw-normal" href="#"><i
+                                class="fa-solid fa-user me-2"></i>My Account</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="hero-section position-relative d-flex flex-column flex-md-row w-100">
+            <div class="d-flex w-100">
+                <div class="w-50 hero-bg">
+                    <img src="Public/images/bgr1.webp" alt="Model" class="w-100 h-100 object-fit-cover">
+                </div>
+                <div class="w-50 hero-bg">
+                    <img src="Public/images/bgr2.jpg" alt="Jacket" class="w-100 h-100 object-fit-cover">
+                </div>
+            </div>
+            <div
+                class="position-absolute top-50 start-50 translate-middle text-center w-100 px-3 z-1 d-none d-md-block">
+                <h1 class="fw-bold text-uppercase mb-3 tracking-wider">Oversized Denim Jacket</h1>
+                <p class="mb-4 mx-auto text-dark hero-desc" style="max-width: 650px;">
+                    Oversized jacket in washed denim with distressed details. Collar, buttons at front, and dropped
+                    shoulders. Chest pockets with flap and button, welt side pockets, and buttons at cuffs.
+                </p>
+                <a href="#"
+                    class="btn btn-light border-dark rounded-0 px-5 py-2 text-uppercase fw-bold shop-now-btn">Shop
+                    Now</a>
+            </div>
+            <div class="w-100 text-center bg-white px-4 py-4 d-block d-md-none">
+                <h1 class="fw-bold text-uppercase mb-2" style="font-size: 1.25rem; letter-spacing: 1px;">Oversized Denim
+                    Jacket</h1>
+                <p class="text-muted mb-3 mx-auto" style="font-size: 0.8rem; line-height: 1.5; max-width: 100%;">
+                    Oversized jacket in washed denim with distressed details. Collar, buttons at front, and dropped
+                    shoulders. Chest pockets with flap and button, welt side pockets.
+                </p>
+                <a href="#" class="btn btn-light border-dark rounded-0 px-4 py-2 text-uppercase fw-bold"
+                    style="font-size: 0.75rem; letter-spacing: 1px;">
+                    Shop Now
+                </a>
+            </div>
+
+        </section>
+
+        <section class="py-5 bg-white">
+
+            <div class="container-fluid px-3 px-md-5 mb-4">
+
+                <div class="d-none d-md-flex row align-items-center text-uppercase"
+                    style="font-size: 0.75rem; letter-spacing: 1.5px;">
+                    <div class="col-md-5 d-flex align-items-center gap-4">
+                        <a href="#"
+                            class="text-decoration-none text-dark fw-bold border-bottom border-dark pb-1">Outerwear</a>
+                        <a href="#" class="text-decoration-none pb-1" style="color: #888 !important;">Sweaters</a>
+                        <a href="#" class="text-decoration-none pb-1" style="color: #888 !important;">Sweatshirts</a>
+                        <a href="#" class="text-decoration-none pb-1" style="color: #888 !important;">Dresses</a>
+                        <a href="#" class="text-decoration-none pb-1" style="color: #888 !important;">T-Shirts</a>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <h2 class="fw-bold text-dark m-0" style="font-size: 1.6rem; letter-spacing: 2px;">FOR HER</h2>
+                    </div>
+                    <div class="col-md-5 d-flex justify-content-end align-items-center gap-3">
+                        <span style="width: 35px; border-top: 1px solid #222; display: inline-block;"></span>
+                        <a href="#" class="text-decoration-none text-dark fw-bold pb-1">View All Collection</a>
+                    </div>
+                </div>
+
+                <div class="d-flex d-md-none flex-column align-items-center text-uppercase"
+                    style="font-size: 0.75rem; letter-spacing: 1px;">
+                    <h2 class="fw-bold text-dark mb-2" style="font-size: 1.4rem; letter-spacing: 2px;">FOR HER</h2>
+
+                    <div class="d-flex align-items-center gap-3 w-100 justify-content-center overflow-x-auto pb-2 text-nowrap"
+                        style="scrollbar-width: none;">
+                        <a href="#"
+                            class="text-decoration-none text-dark fw-bold border-bottom border-dark pb-1">Outerwear</a>
+                        <a href="#" class="text-decoration-none pb-1" style="color: #888 !important;">Sweaters</a>
+                        <a href="#" class="text-decoration-none pb-1" style="color: #888 !important;">Sweatshirts</a>
+                        <a href="#" class="text-decoration-none pb-1" style="color: #888 !important;">Dresses</a>
+                        <a href="#" class="text-decoration-none pb-1" style="color: #888 !important;">T-Shirts</a>
+                    </div>
+
+                    <a href="#" class="text-decoration-none text-dark fw-bold mt-1 pb-1 border-bottom border-dark"
+                        style="font-size: 0.7rem;">View All Collection</a>
+                </div>
+
+            </div>
+
+            <div class="container-fluid p-0">
+                <div class="row g-0 row-cols-2 row-cols-md-4">
+                    <div class="col">
+                        <div class="card border-0 product-card h-100 rounded-0" data-bs-toggle="modal"
+                            data-bs-target="#productModal">
+                            <img src="Public/images/3.jpg" class="card-img-top rounded-0" alt="Product">
+                            <div class="card-body px-3 pt-3 pb-2">
+                                <h6 class="card-title text-muted mb-1" style="font-size: 0.85rem;">Eco Aware organic
+                                    cotton top</h6>
+                                <div class="text-warning mb-1" style="font-size: 0.8rem;">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="fw-bold mb-0 text-dark">$39.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card border-0 product-card h-100 rounded-0" data-bs-toggle="modal"
+                            data-bs-target="#productModal">
+                            <img src="Public/images/4.jpg" class="card-img-top rounded-0" alt="Product">
+                            <div class="card-body px-3 pt-3 pb-2">
+                                <h6 class="card-title text-muted mb-1" style="font-size: 0.85rem;">Embossed knit
+                                    cardigan</h6>
+                                <div class="text-warning mb-1" style="font-size: 0.8rem;">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-regular fa-star"></i>
+                                </div>
+                                <p class="fw-bold mb-0 text-dark">$18.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card border-0 product-card h-100 rounded-0" data-bs-toggle="modal"
+                            data-bs-target="#productModal">
+                            <img src="Public/images/5.webp" class="card-img-top rounded-0" alt="Product">
+                            <div class="card-body px-3 pt-3 pb-2">
+                                <h6 class="card-title text-muted mb-1" style="font-size: 0.85rem;">Lightweight fitted
+                                    jumper</h6>
+                                <div class="text-warning mb-1" style="font-size: 0.8rem;">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="fw-bold mb-0 text-dark">$75.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card border-0 product-card h-100 rounded-0" data-bs-toggle="modal"
+                            data-bs-target="#productModal">
+                            <img src="Public/images/ab.jpg" class="card-img-top rounded-0" alt="Product">
+                            <div class="card-body px-3 pt-3 pb-2">
+                                <h6 class="card-title text-muted mb-1" style="font-size: 0.85rem;">High turtleneck
+                                    jumper</h6>
+                                <div class="text-warning mb-1" style="font-size: 0.8rem;">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="fw-bold mb-0 text-dark">$67.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card border-0 product-card h-100 rounded-0" data-bs-toggle="modal"
+                            data-bs-target="#productModal">
+                            <img src="Public/images/7.jpg" class="card-img-top rounded-0" alt="Product">
+                            <div class="card-body px-3 pt-3 pb-2">
+                                <h6 class="card-title text-muted mb-1" style="font-size: 0.85rem;">Basic sweat joggers
+                                </h6>
+                                <div class="text-warning mb-1" style="font-size: 0.8rem;">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="fw-bold mb-0 text-dark">$11.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card border-0 product-card h-100 rounded-0" data-bs-toggle="modal"
+                            data-bs-target="#productModal">
+                            <img src="Public/images/8.jpg" class="card-img-top rounded-0" alt="Product">
+                            <div class="card-body px-3 pt-3 pb-2">
+                                <h6 class="card-title text-muted mb-1" style="font-size: 0.85rem;">Basic jumper for
+                                    women</h6>
+                                <div class="text-warning mb-1" style="font-size: 0.8rem;">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-regular fa-star"></i>
+                                </div>
+                                <p class="fw-bold mb-0 text-dark">$10.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card border-0 product-card h-100 rounded-0" data-bs-toggle="modal"
+                            data-bs-target="#productModal">
+                            <img src="Public/images/9.jpg" class="card-img-top rounded-0" alt="Product">
+                            <div class="card-body px-3 pt-3 pb-2">
+                                <h6 class="card-title text-muted mb-1" style="font-size: 0.85rem;">Coat with inverted
+                                    collar</h6>
+                                <div class="text-warning mb-1" style="font-size: 0.8rem;">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="fw-bold mb-0 text-dark">$44.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card border-0 product-card h-100 rounded-0" data-bs-toggle="modal"
+                            data-bs-target="#productModal">
+                            <img src="Public/images/10.jpg" class="card-img-top rounded-0" alt="Product">
+                            <div class="card-body px-3 pt-3 pb-2">
+                                <h6 class="card-title text-muted mb-1" style="font-size: 0.85rem;">Cardigan with pockets
+                                </h6>
+                                <div class="text-warning mb-1" style="font-size: 0.8rem;">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-regular fa-star"></i>
+                                </div>
+                                <p class="fw-bold mb-0 text-dark">$19.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="hero-section position-relative overflow-hidden">
+            <video autoplay loop muted playsinline
+                class="position-absolute top-50 start-50 translate-middle w-100 h-100 object-fit-cover z-0">
+                <source src="Public/images/video.mp4" type="video/mp4">
+            </video>
+
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-25 z-1"></div>
+
+            <div class="position-absolute top-50 start-50 translate-middle text-center w-100 px-3 z-2">
+                <h1 class="fw-bold text-uppercase mb-3 tracking-wider display-5 text-white">Oversized Denim Jacket</h1>
+                <p class="mb-4 mx-auto text-white hero-desc" style="max-width: 600px;">
+                    Oversized jacket in washed denim with distressed details. Collar, buttons at front, and dropped
+                    shoulders. Chest pockets with flap and button, welt side pockets, and buttons at cuffs.
+                </p>
+                <a href="#" class="btn btn-light rounded-0 px-5 py-2 text-uppercase fw-bold shop-now-btn">Shop Now</a>
+            </div>
+        </section>
+
+        <section class="py-5 bg-white">
+
+            <div class="container-fluid px-3 px-md-5 mb-4">
+
+                <div class="d-none d-md-flex row align-items-center text-uppercase"
+                    style="font-size: 0.75rem; letter-spacing: 1.5px;">
+                    <div class="col-md-5 d-flex align-items-center gap-4">
+                        <a href="#"
+                            class="text-decoration-none text-dark fw-bold border-bottom border-dark pb-1">Outerwear</a>
+                        <a href="#" class="text-decoration-none pb-1" style="color: #888 !important;">Sweaters</a>
+                        <a href="#" class="text-decoration-none pb-1" style="color: #888 !important;">Sweatshirts</a>
+                        <a href="#" class="text-decoration-none pb-1" style="color: #888 !important;">Shirts</a>
+                        <a href="#" class="text-decoration-none pb-1" style="color: #888 !important;">T-Shirts</a>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <h2 class="fw-bold text-dark m-0" style="font-size: 1.6rem; letter-spacing: 2px;">FOR HIM</h2>
+                    </div>
+                    <div class="col-md-5 d-flex justify-content-end align-items-center gap-3">
+                        <span style="width: 35px; border-top: 1px solid #222; display: inline-block;"></span>
+                        <a href="#" class="text-decoration-none text-dark fw-bold pb-1">View All Collection</a>
+                    </div>
+                </div>
+
+                <div class="d-flex d-md-none flex-column align-items-center text-uppercase"
+                    style="font-size: 0.75rem; letter-spacing: 1px;">
+                    <h2 class="fw-bold text-dark mb-2" style="font-size: 1.4rem; letter-spacing: 2px;">FOR HIM</h2>
+
+                    <div class="d-flex align-items-center gap-3 w-100 justify-content-center overflow-x-auto pb-2 text-nowrap"
+                        style="scrollbar-width: none;">
+                        <a href="#"
+                            class="text-decoration-none text-dark fw-bold border-bottom border-dark pb-1">Outerwear</a>
+                        <a href="#" class="text-decoration-none pb-1" style="color: #888 !important;">Sweaters</a>
+                        <a href="#" class="text-decoration-none pb-1" style="color: #888 !important;">Sweatshirts</a>
+                        <a href="#" class="text-decoration-none pb-1" style="color: #888 !important;">Shirts</a>
+                        <a href="#" class="text-decoration-none pb-1" style="color: #888 !important;">T-Shirts</a>
+                    </div>
+
+                    <a href="#" class="text-decoration-none text-dark fw-bold mt-1 pb-1 border-bottom border-dark"
+                        style="font-size: 0.7rem;">View All Collection</a>
+                </div>
+
+            </div>
+
+            <div class="container-fluid p-0">
+                <div class="row g-0 row-cols-2 row-cols-md-4">
+                    <div class="col">
+                        <div class="card border-0 product-card h-100 rounded-0" data-bs-toggle="modal"
+                            data-bs-target="#productModal">
+                            <img src="Public/images/n1.jpg" class="card-img-top rounded-0" alt="Product">
+                            <div class="card-body px-3 pt-3 pb-2">
+                                <h6 class="card-title text-muted mb-1" style="font-size: 0.85rem;">Classic one-breasted
+                                    jacket</h6>
+                                <div class="text-warning mb-1" style="font-size: 0.8rem;">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-regular fa-star"></i>
+                                </div>
+                                <p class="fw-bold mb-0 text-dark">$21.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card border-0 product-card h-100 rounded-0" data-bs-toggle="modal"
+                            data-bs-target="#productModal">
+                            <img src="Public/images/n2.jpg" class="card-img-top rounded-0" alt="Product">
+                            <div class="card-body px-3 pt-3 pb-2">
+                                <h6 class="card-title text-muted mb-1" style="font-size: 0.85rem;">Black Denim Jacket
+                                </h6>
+                                <div class="text-warning mb-1" style="font-size: 0.8rem;">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="fw-bold mb-0 text-dark">$85.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card border-0 product-card h-100 rounded-0" data-bs-toggle="modal"
+                            data-bs-target="#productModal">
+                            <img src="Public/images/n3.jpg" class="card-img-top rounded-0" alt="Product">
+                            <div class="card-body px-3 pt-3 pb-2">
+                                <h6 class="card-title text-muted mb-1" style="font-size: 0.85rem;">T-shirt with sologan
+                                </h6>
+                                <div class="text-warning mb-1" style="font-size: 0.8rem;">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i
+                                        class="fa-regular fa-star"></i>
+                                </div>
+                                <p class="fw-bold mb-0 text-dark">$104.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card border-0 product-card h-100 rounded-0" data-bs-toggle="modal"
+                            data-bs-target="#productModal">
+                            <img src="Public/images/n4.jpg" class="card-img-top rounded-0" alt="Product">
+                            <div class="card-body px-3 pt-3 pb-2">
+                                <h6 class="card-title text-muted mb-1" style="font-size: 0.85rem;">Blended wool coat
+                                </h6>
+                                <div class="text-warning mb-1" style="font-size: 0.8rem;">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-regular fa-star"></i>
+                                </div>
+                                <p class="fw-bold mb-0 text-dark">$14.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card border-0 product-card h-100 rounded-0" data-bs-toggle="modal"
+                            data-bs-target="#productModal">
+                            <img src="Public/images/n5.jpg" class="card-img-top rounded-0" alt="Product">
+                            <div class="card-body px-3 pt-3 pb-2">
+                                <h6 class="card-title text-muted mb-1" style="font-size: 0.85rem;">Black Bomber Jacket
+                                </h6>
+                                <div class="text-warning mb-1" style="font-size: 0.8rem;">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="fw-bold mb-0 text-dark">$16.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card border-0 product-card h-100 rounded-0" data-bs-toggle="modal"
+                            data-bs-target="#productModal">
+                            <img src="Public/images/n6.jpg" class="card-img-top rounded-0" alt="Product">
+                            <div class="card-body px-3 pt-3 pb-2">
+                                <h6 class="card-title text-muted mb-1" style="font-size: 0.85rem;">Lightweight bomber
+                                    jacket</h6>
+                                <div class="text-warning mb-1" style="font-size: 0.8rem;">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-regular fa-star"></i>
+                                </div>
+                                <p class="fw-bold mb-0 text-dark">$74.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card border-0 product-card h-100 rounded-0" data-bs-toggle="modal"
+                            data-bs-target="#productModal">
+                            <img src="Public/images/n7.jpg" class="card-img-top rounded-0" alt="Product">
+                            <div class="card-body px-3 pt-3 pb-2">
+                                <h6 class="card-title text-muted mb-1" style="font-size: 0.85rem;">Transition jacket
+                                    with hood</h6>
+                                <div class="text-warning mb-1" style="font-size: 0.8rem;">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="fw-bold mb-0 text-dark">$113.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card border-0 product-card h-100 rounded-0" data-bs-toggle="modal"
+                            data-bs-target="#productModal">
+                            <img src="Public/images/n8.jpg" class="card-img-top rounded-0" alt="Product">
+                            <div class="card-body px-3 pt-3 pb-2">
+                                <h6 class="card-title text-muted mb-1" style="font-size: 0.85rem;">Classic shirl with
+                                    pocket</h6>
+                                <div class="text-warning mb-1" style="font-size: 0.8rem;">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i
+                                        class="fa-regular fa-star"></i>
+                                </div>
+                                <p class="fw-bold mb-0 text-dark">$26.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonial-section py-5 mb-5">
+            <div class="container py-4">
+                <div class="row align-items-center g-5">
+
+                    <div class="col-md-6 d-flex flex-column justify-content-between">
+                        <div class="testimonial-content">
+                            <span
+                                class="text-uppercase tracking-wider small-title d-block mb-2 text-secondary fw-semibold">
+                                What customer say about us
+                            </span>
+
+                            <div class="stars mb-4 text-dark fs-5">
+                                ★★★★★
+                            </div>
+
+                            <p class="review-text mb-4 text-dark">
+                                Best purchase I've made this winter! The color and knitting are exquisite and it's so
+                                comfy! Went from NYC to Miami without ever taking it off. Super cute!!
+                            </p>
+
+                            <span class="author-name d-block text-muted mb-5">
+                                — Christina M. / From Canada
+                            </span>
+                        </div>
+
+                        <div class="slider-arrows d-flex gap-3 align-items-center">
+                            <button class="btn p-0 border-0 text-dark bg-transparent fs-4" type="button">
+                                &#10094; </button>
+                            <button class="btn p-0 border-0 text-dark bg-transparent fs-4" type="button">
+                                &#10095; </button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="testimonial-img-box w-100">
+                            <img src="Public/images/tes_1_1080x.png" alt="Customer review photo"
+                                class="w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="blog-section py-5 bg-white">
+            <div class="container py-4">
+                <h2 class="text-center fw-bold text-uppercase mb-5 tracking-wider section-title"
+                    style="letter-spacing: 2px;">From Our Blog</h2>
+
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="blog-card border-0">
+                            <div class="blog-img-box mb-4">
+                                <img src="Public/images/blog-1_900x.png" alt="5 Sweet Outfit Ideas"
+                                    class="w-100 img-fluid object-fit-cover">
+                            </div>
+                            <div class="blog-content bg-white text-center px-2">
+                                <h5 class="fw-bold blog-title mb-3 lh-base">
+                                    <a href="#" class="text-decoration-none text-dark hover-underline"
+                                        style="font-size: 1.05rem;">5 Sweet Outfit
+                                        Ideas You'll Wear Well Beyond Valentine's Day</a>
+                                </h5>
+                                <p class="text-muted blog-excerpt small mb-3 px-2" style="color: #777 !important;">
+                                    Valentine's Day 2021 has no choice but to unfold rather differently than usual, so
+                                    we already know it will be one to remember. Lorem ipsum dolor sit amet...
+                                </p>
+                                <hr class="short-line my-3 mx-auto"
+                                    style="width: 40px; border-top: 1px solid #222; opacity: 1;">
+                                <div class="blog-meta d-flex justify-content-center gap-3 text-uppercase small text-secondary"
+                                    style="font-size: 0.75rem; letter-spacing: 1px;">
+                                    <i class="fa-regular fa-user" style="color: rgb(3, 3, 3);"></i>
+                                    <span class="fw-bold mb-1 text-dark small-policy-title" style="font-size: 0.8rem"
+                                        style="color: black;">By Vinova Theme</span>
+                                    <span><i class="fa-regular fa-calendar-days" style="color: rgb(217, 217, 217);"></i>
+                                        03 Mar 2021</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="blog-card border-0">
+                            <div class="blog-img-box mb-4">
+                                <img src="Public/images/blog-2_900x.png" alt="How To Be Good With Money"
+                                    class="w-100 img-fluid object-fit-cover">
+                            </div>
+                            <div class="blog-content bg-white text-center px-2">
+                                <h5 class="fw-bold blog-title mb-3 lh-base">
+                                    <a href="#" class="text-decoration-none text-dark hover-underline"
+                                        style="font-size: 1.05rem;">How To Be "Good
+                                        With Money" According To 4 Female Financial Experts</a>
+                                </h5>
+                                <p class="text-muted blog-excerpt small mb-3 px-2" style="color: #777 !important;">
+                                    Valentine's Day 2021 has no choice but to unfold rather differently than usual, so
+                                    we already know it will be one to remember. Lorem ipsum dolor sit amet...
+                                </p>
+                                <hr class="short-line my-3 mx-auto"
+                                    style="width: 40px; border-top: 1px solid #222; opacity: 1;">
+                                <div class="blog-meta d-flex justify-content-center gap-3 text-uppercase small text-secondary"
+                                    style="font-size: 0.75rem; letter-spacing: 1px;">
+                                    <i class="fa-regular fa-user" style="color: rgb(3, 3, 3);"></i>
+                                    <span class="fw-bold mb-1 text-dark small-policy-title" style="font-size: 0.8rem"
+                                        style="color: black;">By Vinova Theme</span>
+                                    <span><i class="fa-regular fa-calendar-days" style="color: rgb(217, 217, 217);"></i>
+                                        03 Mar 2021</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="blog-card border-0">
+                            <div class="blog-img-box mb-4">
+                                <img src="Public/images/blog-3_900x.png" alt="This Scandi Influencer"
+                                    class="w-100 img-fluid object-fit-cover">
+                            </div>
+                            <div class="blog-content bg-white text-center px-2">
+                                <h5 class="fw-bold blog-title mb-3 lh-base">
+                                    <a href="#" class="text-decoration-none text-dark hover-underline"
+                                        style="font-size: 1.05rem;">This Scandi
+                                        Influencer's Shoe Collaboration Is The Gift That Keeps On Giving</a>
+                                </h5>
+                                <p class="text-muted blog-excerpt small mb-3 px-2" style="color: #777 !important;">
+                                    Valentine's Day 2021 has no choice but to unfold rather differently than usual, so
+                                    we already know it will be one to remember. Lorem ipsum dolor sit amet...
+                                </p>
+                                <hr class="short-line my-3 mx-auto"
+                                    style="width: 40px; border-top: 1px solid #222; opacity: 1;">
+                                <div class="blog-meta d-flex justify-content-center gap-3 text-uppercase small text-secondary"
+                                    style="font-size: 0.75rem; letter-spacing: 1px;">
+                                    <i class="fa-regular fa-user" style="color: rgb(3, 3, 3);"></i>
+                                    <span class="fw-bold mb-1 text-dark small-policy-title" style="font-size: 0.8rem"
+                                        style="color: black;">By Vinova Theme</span>
+                                    <span><i class="fa-regular fa-calendar-days" style="color: rgb(217, 217, 217);"></i>
+                                        03 Mar 2021</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="policy-bar-section py-4 border-top border-bottom bg-white">
+            <div class="container">
+                <div class="row g-4 justify-content-between">
+                    <div
+                        class="col-md-4 d-flex align-items-center gap-3 justify-content-center justify-content-md-start">
+                        <i class="fa-solid fa-truck text-dark"
+                            style="font-size: 1.5rem; width: 30px; text-align: center;"></i>
+                        <div>
+                            <h6 class="fw-bold mb-1 text-dark small-policy-title" style="font-size: 0.9rem;">Free
+                                Shipping <span class="fw-normal text-muted" style="font-size: 0.85rem;">on all U.S.
+                                    order or order above $99</span></h6>
+                        </div>
+                    </div>
+                    <div
+                        class="col-md-4 d-flex align-items-center gap-3 justify-content-center justify-content-md-start">
+                        <i class="fa-solid fa-phone-volume" style="color: black;"
+                            style="font-size: 1.5rem; width: 30px; text-align: center;"></i>
+                        <div>
+                            <h6 class="fw-bold mb-1 text-dark small-policy-title" style="font-size: 0.9rem;">Support
+                                24/7 <span class="fw-normal text-muted" style="font-size: 0.85rem;">: Contact us 24
+                                    hours a day, 7 days a week</span></h6>
+                        </div>
+                    </div>
+                    <div
+                        class="col-md-4 d-flex align-items-center gap-3 justify-content-center justify-content-md-start">
+                        <i class="fa-solid fa-repeat" style="color:black;"
+                            style="font-size: 1.4rem; width: 30px; text-align: center;"></i>
+                        <div>
+                            <h6 class="fw-bold mb-1 text-dark small-policy-title" style="font-size: 0.9rem;">30 Days
+                                Return <span class="fw-normal text-muted" style="font-size: 0.85rem;">: Simply return it
+                                    within 30 days for an exchange.</span></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer py-5" style="background-color: #f6f4f0 !important;">
+        <div class="container border-bottom pb-5" style="border-color: #e5e2dc !important;">
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <h5 class="fw-bold text-uppercase mb-4 footer-heading"
+                        style="font-size: 0.95rem; letter-spacing: 1px;">About The Store</h5>
+                    <p class="footer-text text-muted mb-3 small lh-lg">
+                        We are design and product obsessed. Uncompromising in the style, quality and performance of
+                        every product we create.
+                    </p>
+                    <p class="footer-text text-muted small lh-lg">
+                        This is a demonstration of the Symmetry theme for Shopify. Essentials, Outerwear & Activewear
+                        kindly donated by Varley.
+                    </p>
+                </div>
+
+                <div class="col-md-4 ps-md-5">
+                    <h5 class="fw-bold text-uppercase mb-4 footer-heading"
+                        style="font-size: 0.95rem; letter-spacing: 1px;">Customer Support</h5>
+                    <ul class="list-unstyled footer-links small lh-lg">
+                        <li class="mb-2"><a href="#"
+                                class="text-secondary text-decoration-none hover-underline">Customer Service</a></li>
+                        <li class="mb-2"><a href="#"
+                                class="text-secondary text-decoration-none hover-underline">Shipping and Delivery</a>
+                        </li>
+                        <li class="mb-2"><a href="#"
+                                class="text-secondary text-decoration-none hover-underline">Returns</a></li>
+                        <li class="mb-2"><a href="#" class="text-secondary text-decoration-none hover-underline">Size
+                                Charts</a></li>
+                        <li class="mb-2"><a href="#" class="text-secondary text-decoration-none hover-underline">Email
+                                Signup</a></li>
+                        <li class="mb-2"><a href="#" class="text-secondary text-decoration-none hover-underline">Contact
+                                Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <h5 class="fw-bold text-uppercase mb-4 footer-heading"
+                        style="font-size: 0.95rem; letter-spacing: 1px;">Newsletter</h5>
+                    <p class="footer-text text-muted mb-4 small lh-lg">
+                        Get 15% off your first purchase! Plus, be the first to know about sales, new product launches
+                        and exclusive offers!
+                    </p>
+                    <div class="newsletter-input-group mb-4 position-relative">
+                        <input type="email"
+                            class="form-control bg-transparent border-0 border-bottom border-dark rounded-0 px-0 pb-2 shadow-none small"
+                            placeholder="Email address" style="font-size: 0.9rem;">
+                        <button class="btn position-absolute end-0 top-0 p-0 border-0 bg-transparent"
+                            type="button">➔</button>
+                    </div>
+                    <div class="social-icons d-flex gap-3">
+                        <i class="fa-brands fa-facebook" style="color: rgb(3, 3, 3);"></i>
+                        <i class="fa-brands fa-twitter" style="color: rgb(3, 3, 3);"></i>
+                        <i class="fa-brands fa-pinterest" style="color: rgb(3, 3, 3);"></i>
+                        <i class="fa-brands fa-vimeo-v" style="color: rgb(3, 3, 3);"></i>
+                        <i class="fa-brands fa-instagram" style="color: rgb(3, 3, 3);"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container pt-4">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                <div>
+                    <div class="footer-bottom-links d-flex flex-wrap gap-2 mb-2 small text-muted">
+                        <a href="#" class="text-secondary text-decoration-none hover-underline">Privacy Policy</a> |
+                        <a href="#" class="text-secondary text-decoration-none hover-underline">Cookie Preferences</a> |
+                        <a href="#" class="text-secondary text-decoration-none hover-underline">Terms of Use</a> |
+                        <a href="#" class="text-secondary text-decoration-none hover-underline">About Us</a> |
+                        <a href="#" class="text-secondary text-decoration-none hover-underline">UK Careers</a> |
+                        <a href="#" class="text-secondary text-decoration-none hover-underline">Contact Us</a>
+                    </div>
+                    <p class="mb-0 text-muted small">Copyright © 2021 Vinovathemes. All rights reserved.</p>
+                </div>
+
+                <div class="d-flex flex-column align-items-center align-items-md-end gap-2">
+                    <select
+                        class="form-select form-select-sm bg-white border border-secondary-subtle rounded-0 fw-bold px-3 py-1"
+                        style="width: auto; font-size: 0.75rem; height: 32px; min-width: 80px;">
+                        <option>USD</option>
+                    </select>
+
+                    <div class="payment-methods">
+                        <img src="Public/images/paypal_240x.png" alt="Visa, Mastercard, Paypal, Amex"
+                            style="height: 24px; width: auto;" class="object-fit-contain">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" id="btnPageUp" title="Go to top"
+            style="position: fixed; bottom: 30px; right: 30px; background: none; border: none; padding: 0; z-index: 1050; opacity: 0; visibility: hidden; transition: all 0.3s ease; cursor: pointer; outline: none;">
+
+            <img src="Public/images/move-top.png" alt="Back to top"
+                style="width: 44px; height: 44px; object-fit: contain;">
+
+        </button>
+    </footer>
+
+    <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content rounded-0 border-0 shadow-lg">
+                <div class="modal-header border-0 pe-4 pt-4">
+                    <button type="button" class="btn-close" data-bs-shadow="none" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4 pt-0">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <img id="modalProductImg" src="" alt="Product Detail"
+                                class="img-fluid w-100 object-fit-cover" style="max-height: 480px;">
+                        </div>
+                        <div class="col-md-6 d-flex flex-column justify-content-center">
+                            <span class="text-uppercase text-muted small tracking-wider mb-2">Salehub Collection</span>
+                            <h3 id="modalProductTitle" class="fw-bold text-uppercase mb-2">Tên Mặt Hàng</h3>
+                            <div id="modalProductStars" class="text-warning mb-3"></div>
+                            <h4 id="modalProductPrice" class="fw-bold text-dark mb-4">Giá tiền</h4>
+                            <p class="text-muted small mb-4 lh-lg">
+                                Sản phẩm cao cấp thuộc bộ sưu tập mới nhất. Chất liệu vải được xử lý đặc biệt mang lại
+                                form dáng chuẩn, độ bền màu cao và vô cùng thân thiện với làn da người mặc.
+                            </p>
+                            <button id="modalAddToCartBtn"
+                                class="btn btn-dark w-100 py-3 text-uppercase fw-bold rounded-0">
+                                Thêm vào giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="Public/js/scripts.js"></script>
+
+    <script>
+        const btnPageUp = document.getElementById("btnPageUp");
+
+        window.onscroll = function () {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btnPageUp.style.opacity = "1";
+                btnPageUp.style.visibility = "visible";
+            } else {
+                btnPageUp.style.opacity = "0";
+                btnPageUp.style.visibility = "hidden";
+            }
+        };
+
+        btnPageUp.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+</body>
+
+</html>
